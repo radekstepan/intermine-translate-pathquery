@@ -7,6 +7,27 @@
     "dependencies": {
         "sax": "0.4.2",
         "imjs": "0.1.1",
-        "colors": "0.6.0-1"
+
+        "flatiron": "git://github.com/flatiron/flatiron.git#master",
+        "union": "git://github.com/flatiron/union.git#master",
+        "connect": "1.9.2",
+
+        "brunch": "1.4.2",
+
+        "javascript-brunch": ">= 1.0 < 1.5",
+        "coffee-script-brunch": ">= 1.0 < 1.5",
+
+        "eco-brunch": ">= 1.0 < 1.5",
+        
+        "css-brunch": ">= 1.0 < 1.5",
+        "stylus-brunch": ">= 1.0 < 1.5",
+
+        "uglify-js-brunch": ">= 1.0 < 1.5",
+        "clean-css-brunch": ">= 1.0 < 1.5",
+
+        "auto-reload-brunch": ">= 1.0 < 1.5"
+    },
+    "scripts": {
+        "start": "./node_modules/.bin/brunch watch --server"
     }
 }
