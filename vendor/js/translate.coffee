@@ -4,7 +4,7 @@ require.define 'translate': (exports, require, module) ->
     root = @
 
     # JSON to XML (using IMJS).
-    module.exports.toXML = toXML = (json, xml) ->
+    module.exports.toXML = (json, xml) ->
         assert root.intermine?, 'Library `imjs` not found'
 
         if typeof json is 'string' then json = JSON.parse json
@@ -15,7 +15,7 @@ require.define 'translate': (exports, require, module) ->
             xml error
 
     # XML to JSON (using SAX Parser).
-    module.exports.toJSON = toJSON = (xml, json) ->
+    module.exports.toJSON = (xml, json) ->
         assert root.sax?, 'Library `sax-js` not found'
 
         sax = root.sax.parser(true)

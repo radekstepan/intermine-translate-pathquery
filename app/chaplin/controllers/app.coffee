@@ -22,3 +22,12 @@ module.exports = class AppController extends Chaplin.Controller
 
         Translate.toXML json, (err, xml) ->
             console.log xml
+
+        xml = """
+            <query view="Gene.publications.title Gene.publications.year Gene.publications.journal Gene.publications.pubMedId Gene.publications.authors.name">
+                <join path="Gene.publications.authors" style="OUTER"/>
+            </query> 
+        """
+
+        Translate.toJSON xml, (err, json) ->
+            console.log json
