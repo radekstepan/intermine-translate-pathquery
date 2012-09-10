@@ -7,9 +7,8 @@ require.define 'translate': (exports, require, module) ->
     module.exports.toXML = (json, xml) ->
         assert root.intermine?, 'Library `imjs` not found'
 
-        if typeof json is 'string' then json = JSON.parse json
-
         try
+            if typeof json is 'string' then json = JSON.parse json
             xml null, (new root.intermine.Query(json)).toXML()
         catch error
             xml error
@@ -45,7 +44,7 @@ require.define 'translate': (exports, require, module) ->
             
             attributes = {}
 
-        sax.onend = -> json null, JSON.stringify query
+        sax.onend = -> json null, JSON.stringify query, null, 4
 
         sax.onerror = (e) -> json e
 

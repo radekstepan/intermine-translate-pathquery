@@ -1,52 +1,10 @@
-<!-- navbar -->
-<header id="navbar" class="navbar">
-    <div class="row-fluid">
-        <a class="brand span2" href="/toskur/index">InterMine MyMine</a>
-        
-        <div class="nav-collapse span10">
-            <ul class="nav">
-                <!-- lists filter -->
-                <li><div id="filtering"></div></li>
-            </ul>
-        </div>
-    </div>
+<header>
+    <h1>InterMine <span>Translate PathQuery</span></h1>
 </header>
 
-<!-- flexible page structure -->
-<div class="container-fluid">
-    <div class="row-fluid">
-        <!-- left sidebar -->
-        <div id="sidebar" class="span2">
-            <ul class="nav nav-tabs">
-                <li class="active"><a>Folders</a></li>
-                <li><a>Tags</a></li>
-            </ul>
-
-            <!-- groups, lists -->
-            <ul id="folders" class="folders-tree nav nav-list nav-stacked"></ul>
-        </div>
-    
-        <!-- content -->
-        <article id="content" class="span8">
-            <!-- crumbs -->
-            <ul id="breadcrumb" class="breadcrumb">
-                <li><a href="/toskur/index" class="home icon-home"></a></li>
-            </ul>
-
-            <!-- header of this section -->
-            <header id="title"></header>
-
-            <!-- main folder/list view -->
-            <div id="main"></div>
-        </article>
-
-        <!-- right sidebar, actions -->
-        <div id="actions" class="span2"></div>
-    </div>
+<div class="editor">
+    <div id="xml"></div>
 </div>
-
-<!-- notifications -->
-<ul id="notifications"></ul>
-
-<!-- popovers -->
-<div id="popover"></div>
+<div class="editor">
+    <div id="json"></div>
+</div>
