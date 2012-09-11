@@ -24,10 +24,17 @@ module.exports = class EditorView extends Chaplin.View
     translate: (text, fce) =>
         if text? and fce?
             Translate[fce] text, (err, output) =>
+                # Clear existing err message.
+                if @error? then $(@error).remove()
+                
+                # Output OK.
                 unless err
                     @session.setValue output
+                # Err message.
                 else
-                    console.log err.message
+                    $(@container).append @error = $ '<div/>',
+                        'class': 'error'
+                        'text':  err.message.split("\n")[0]
 
     # Is this editor in focus?
     inFocus: -> $(@container).hasClass 'ace_focus'
@@ -45,7 +52,7 @@ module.exports = class EditorView extends Chaplin.View
         # Render.
         editor = ace.edit @container[1...]
         # Theme
-        editor.setTheme "ace/theme/monokai"
+        editor.setTheme "ace/theme/clouds_midnight"
         
         @session = editor.getSession()
         renderer = editor.renderer
