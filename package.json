@@ -5,6 +5,8 @@
     "version": "0.0.2",
     "private": true,
     "dependencies": {
+        "coffee-script": "1.3.3",
+        
         "sax": "0.4.2",
         "imjs": "0.1.1",
 
@@ -28,6 +30,6 @@
         "auto-reload-brunch": ">= 1.0 < 1.5"
     },
     "scripts": {
-        "start": "./node_modules/.bin/brunch watch --server"
+        "start": "./node_modules/.bin/coffee server.coffee"
     }
 }

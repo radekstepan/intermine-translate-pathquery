@@ -46,7 +46,7 @@ $ /var/lib/gems/1.8/bin/rhc domain status
 To determine the status of the app, run:
 
 ```bash
-$ /var/lib/gems/1.8/bin/rhc-app status -a accordb
+$ /var/lib/gems/1.8/bin/rhc-app status -a pathquery
 ```
 
-You can also SFTP into your instance on port `22` [sftp://accordb-intermine.rhcloud.com](sftp://accordb-intermine.rhcloud.com) or SSH to it.
+You can also SFTP into your instance on port `22` [sftp://pathquery-intermine.rhcloud.com](sftp://pathquery-intermine.rhcloud.com) or SSH to it.

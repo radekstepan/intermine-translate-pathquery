@@ -21,8 +21,3 @@ exports.config =
 
         templates:
             joinTo: 'js/app.js'
-
-    server:
-        path: 'server.coffee'
-        port: 1160
-        run: yes

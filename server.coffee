@@ -3,16 +3,14 @@
 flatiron = require 'flatiron'
 connect  = require 'connect'
 
-# Export for Brunch.
-exports.startServer = (port, dir) ->
-    app = flatiron.app
-    app.use flatiron.plugins.http,
-        'before': [
-            # Have a nice favicon.
-            connect.favicon()
-            # Static file serving.
-            connect.static "./#{dir}"
-        ]
+app = flatiron.app
+app.use flatiron.plugins.http,
+    'before': [
+        # Have a nice favicon.
+        connect.favicon()
+        # Static file serving.
+        connect.static "./public"
+    ]
 
-    app.start port, (err) ->
-        throw err if err
+app.start process.env.OPENSHIFT_INTERNAL_PORT or 1160, process.env.OPENSHIFT_INTERNAL_IP, (err) ->
+    throw err if err
