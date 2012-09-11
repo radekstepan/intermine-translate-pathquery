@@ -1,0 +1,39 @@
+body {
+  background: #272822;
+}
+header h1 {
+  margin: 15px 1%;
+  padding: 0;
+  font-size: 20px;
+  color: #53cdab;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+header h1 span {
+  color: #f1f1f1;
+}
+.editor {
+  width: 50%;
+  float: left;
+  display: block;
+  min-height: 100px;
+}
+.editor .error {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #927c5d;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  z-index: 99;
+  padding: 5px 10px 2px 10px;
+  line-height: 20px;
+}
+.editor .ace_editor {
+  width: 50%;
+  min-height: 100px;
+}
+.editor .ace_editor .ace_sb {
+  display: none;
+}
